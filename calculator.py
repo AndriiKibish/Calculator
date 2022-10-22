@@ -21,9 +21,9 @@ def div_result():
     try:
         result = num1_int / num2_int
         label.config(text=f'{result}')
-    except:
+    except Exception as error:
         num2_int = 0
-        print("division by zero")
+        print("division by zero", error)
         label.config(text='Division by zero not possible')
 
 

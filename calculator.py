@@ -1,23 +1,31 @@
-from tkinter import *
+frfrom tkinter import *
+from math import pow, sqrt, sin, cos, tan, log
+
+def dan():
+    num1_int = int(num1.get())
+    num2_int = int(num2.get())
+    return num1_int, num2_int
+
+
+def one_c():
+    num1_int = int(num1.get())
+    return num1_int
 
 
 def sum_result():
-    num1_int = int(num1.get())
-    num2_int = int(num2.get())
+    num1_int, num2_int = dan()
     result = num1_int + num2_int
     label.config(text=f'{result}')
 
 
 def diff_result():
-    num1_int = int(num1.get())
-    num2_int = int(num2.get())
+    num1_int, num2_int = dan()
     result = num1_int - num2_int
     label.config(text=f'{result}')
 
 
 def div_result():
-    num1_int = int(num1.get())
-    num2_int = int(num2.get())
+    num1_int, num2_int = dan()
     try:
         result = num1_int / num2_int
         label.config(text=f'{result}')
@@ -28,8 +36,7 @@ def div_result():
 
 
 def mult_result():
-    num1_int = int(num1.get())
-    num2_int = int(num2.get())
+    num1_int, num2_int = dan()
     result = num1_int * num2_int
     label.config(text=f'{result}')
 
